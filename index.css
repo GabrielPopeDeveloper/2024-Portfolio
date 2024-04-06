@@ -42,8 +42,68 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+section:nth-child(1) {
+    background-color: #ffcccc; /* About Me section background color */
+}
+
+section:nth-child(2) {
+    background-color: #ccffcc; /* Experience section background color */
+}
+
+section:nth-child(3) {
+    background-color: #ccccff; /* Projects section background color */
+}
+
+section:nth-child(4) {
+    background-color: #ffffcc; /* Skills section background color */
 }
 
 section h2 {
     margin-top: 0;
 }
+
+/* Styles for About Me section */
+#about {
+    padding: 20px;
+}
+
+/* Styles for info boxes */
+.info-box {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.box {
+    width: 450px;
+    height: 120px;
+    background-color: #fff; /* White background */
+    border: 2px solid #000; /* Black border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:nth-child(1) {
+    position: absolute;
+    top: 50px; /* Adjust top position in pixels */
+    left: -500px; /* Adjust left position in pixels */
+}
+
+.box:nth-child(2) {
+    position: absolute;
+    top: 250px; /* Adjust top position in pixels */
+    left: -500px; /* Adjust left position for the second box */
+}
+
+.box p {
+    margin: 0;
+    font-size: 16px;
+}
+
+
