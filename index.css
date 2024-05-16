@@ -1,109 +1,46 @@
 body {
+    background-color: dimgrey;
+    height: 100vh; /* Set the body height to 100% of the viewport height */
     margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-.navigation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
     display: flex;
-    justify-content: center;
-    padding: 10px 0;
-    z-index: 1000;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
 }
 
-.navigation a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 20px;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
+#loading-bar {
+    width: 200px; /* Set the width of the loading bar */
+    height: 20px; /* Set the height of the loading bar */
+    background-color: lightgray; /* Set the background color of the loading bar */
+    margin-top: 20px; /* Set the top margin of the loading bar */
+    animation: loading 2s linear forwards; /* Apply loading animation */
 }
 
-.navigation a:hover {
-    color: #ffcc00;
+#loading-icon  img{
+    /* Styling for your loading icon goes here */
+    max-width: 200px; /* Limit the maximum width to 200 pixels */
+    max-height: 200px; /* Limit the maximum height to 200 pixels */
 }
 
-main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+@keyframes loading {
+    from { width: 0; } /* Start loading animation with width 0 */
+    to { width: 100%; } /* End loading animation with width 100% */
 }
 
-section {
-    height: 100vh;
-    overflow-y: auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.5s ease;
+#center {
+    text-align: center;
 }
 
-section:nth-child(1) {
-    background-color: #ffcccc; /* About Me section background color */
+h1 {
+    font-weight: bold;
+    font-family: comic-sans, sans-serif;
 }
 
-section:nth-child(2) {
-    background-color: #ccffcc; /* Experience section background color */
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
-section:nth-child(3) {
-    background-color: #ccccff; /* Projects section background color */
+/* Apply fade-in animation to loading container and content */
+.fade-in {
+    animation: fade-in 1s ease-in-out forwards;
 }
-
-section:nth-child(4) {
-    background-color: #ffffcc; /* Skills section background color */
-}
-
-section h2 {
-    margin-top: 0;
-}
-
-/* Styles for About Me section */
-#about {
-    padding: 20px;
-}
-
-/* Styles for info boxes */
-.info-box {
-    position: relative;
-    height: 100%;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-}
-
-.box {
-    width: 450px;
-    height: 120px;
-    background-color: #fff; /* White background */
-    border: 2px solid #000; /* Black border */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.box:nth-child(1) {
-    position: absolute;
-    top: 50px; /* Adjust top position in pixels */
-    left: -500px; /* Adjust left position in pixels */
-}
-
-.box:nth-child(2) {
-    position: absolute;
-    top: 250px; /* Adjust top position in pixels */
-    left: -500px; /* Adjust left position for the second box */
-}
-
-.box p {
-    margin: 0;
-    font-size: 16px;
-}
-
-

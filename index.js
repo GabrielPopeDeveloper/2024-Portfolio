@@ -1,20 +1,13 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll(".navigation a");
-    
-    links.forEach(link => {
-        link.addEventListener("click", function(event) {
-            event.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
-            
-            window.scrollTo({
-                top: targetElement.offsetTop - 50, // Adjust offset as needed
-                behavior: "smooth"
-            });
-        });
-    });
+window.addEventListener('load', function() {
+    // Simulate a loading delay of 5 seconds
+    setTimeout(function() {
+        // After the loading delay, fade in the loading elements
+        document.getElementById('loading-container').classList.add('fade-in');
+        document.getElementById('content').style.display = 'block';
+
+        // After the fade-in animation duration (e.g., 1 second), remove the loading image
+        setTimeout(function() {
+            document.getElementById('loading-icon').style.display = 'none';
+        }, 0); // 1000 milliseconds = 1 second (adjust as needed)
+    }, 5000); // 5000 milliseconds = 5 seconds
 });
-
-
-
-
